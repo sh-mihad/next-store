@@ -16,7 +16,7 @@ export default function Product({product}) {
         {title}
       </Link>
       <span className="text-[#919090]">
-        <a href="./category.html">({category})</a>
+        <Link href={`/category/${category}`}>({category})</Link>
       </span>
     </h2>
     <p className="text-[#919090] text-sm ">

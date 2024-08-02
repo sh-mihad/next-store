@@ -1,5 +1,6 @@
 import starImg from "@/public/assets/svg/star.svg";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function ProductDetails({ product }) {
   const { thumbnail, title ,description,price,category,discountPercentage} = product;
@@ -37,7 +38,7 @@ export default function ProductDetails({ product }) {
           <h1 className="italic text-xl lg:text-3xl font-serif font-semibold">
             {title}
           </h1>
-          <span className="text-[#919090] my-3">{category}</span>
+          <Link href={`/category/${category}`} className="text-[#919090] my-3">{category}</Link>
           <div className="mt-3 flex items-center justify-start gap-1">
             <Image src={starImg} width="20px" alt="star" />
             <Image src={starImg} width="20px" alt="star" />
