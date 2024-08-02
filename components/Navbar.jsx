@@ -4,6 +4,7 @@ import avatar from "@/public/assets/svg/avatar.svg";
 import menuSvg from "@/public/assets/svg/menu.svg";
 import soppingCart from "@/public/assets/svg/shopping-Cart.svg";
 import Image from 'next/image';
+import Link from "next/link";
 
 export default function Navbar() {
   return (
@@ -15,13 +16,13 @@ export default function Navbar() {
           className="lg:hidden w-5 h-5"
           alt="menu-icon"
         />
-        <a href="./index.html">
+        <Link href="/">
         <Image
           src={lwsLogo}
           class="h-10"
           alt="logo"
         />
-        </a>
+        </Link>
       </div>
     </div>
     <div className="flex items-center justify-end gap-2 lg:gap-5 lg:w-4/12">

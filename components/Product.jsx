@@ -1,7 +1,8 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Product({product}) {
-  const  {thumbnail,title,category,description,discountPercentage,price} = product
+  const  {thumbnail,title,category,description,discountPercentage,price,id} = product
   return (
     <div>
     <Image
@@ -11,9 +12,9 @@ export default function Product({product}) {
       alt="Picture of the author"
     />
     <h2 className="text-sm lg:text-base mt-2">
-      <a className="text-base font-bold" href="./productPage.html">
+      <Link className="text-base font-bold" href={`/product/${id}`}>
         {title}
-      </a>
+      </Link>
       <span className="text-[#919090]">
         <a href="./category.html">({category})</a>
       </span>
